@@ -106,7 +106,8 @@ transform: translateZ(0);
   bottom:0;
   left:0;
   z-index: 1050;
-
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
 }
 .Exp-dialog {
   background-color: #f9f6ea;
