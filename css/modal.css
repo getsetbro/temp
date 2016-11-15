@@ -11,6 +11,8 @@
   -webkit-overflow-scrolling: touch;
   outline: 0;
   transition: all 0.4s;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -104,8 +106,7 @@
   bottom:0;
   left:0;
   z-index: 1050;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0,0,0);
+
 }
 .Exp-dialog {
   background-color: #f9f6ea;
@@ -117,8 +118,6 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0,0,0);
 }
 
 .Exp.full .Exp-dialog {
@@ -132,8 +131,7 @@
   position: relative;
   height: 388px;
   transition: height 0.5s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0,0,0);
+
 }
 .Exp.full .Exp-header {height: 500px}
 .Exp-close{
@@ -185,8 +183,6 @@
   -webkit-transition: -webkit-transform 0.3s;
   -o-transition: -o-transform 0.3s;
   transition: transform 0.3s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0,0,0);
 }
 .Exp:not(.full) .Exp-hero{
   transform: translateY(-200px);
