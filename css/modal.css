@@ -1,5 +1,4 @@
 /*normal modal*/
-.modal-open {overflow: hidden}
 .modal {
   position: fixed;
   top:50%;
@@ -11,9 +10,10 @@
   -webkit-overflow-scrolling: touch;
   outline: 0;
   transition: all 0.4s;
--webkit-transform: translateZ(0);
-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
+.modal-open {overflow: hidden}
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -98,7 +98,10 @@ transform: translateZ(0);
 .Exp:nth-of-type(5) .Exp-header{background-color:#989898}
 .Exp:nth-of-type(6) .Exp-header{background-color:#c1c1c1}
 
-.Exp-modal {}
+.Exp-modal {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
 .Exp.full .Exp-modal {
   position: fixed;
   top:0;
@@ -106,8 +109,7 @@ transform: translateZ(0);
   bottom:0;
   left:0;
   z-index: 1050;
--webkit-transform: translateZ(0);
-transform: translateZ(0);
+
 }
 .Exp-dialog {
   background-color: #f9f6ea;
