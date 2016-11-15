@@ -494,8 +494,10 @@
 </center>
 <footer>&copy;thewanted <script>document.write(new Date().getFullYear())</script></footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+-->
 <script src="./js/svg4everybody.min.js"></script>
 <script>svg4everybody();
 
@@ -508,11 +510,12 @@ $('.Exp').on('click',function(e){
 	if(!_this.hasClass('full')){
 		var top = _this[0].getBoundingClientRect().top;
 		var _this_dialog = _this.find('.Exp-dialog');
-		_this_dialog.css('top',top+'px');
-		_body.addClass('modal-open');
-		_this.addClass('full');
-		TweenLite.to(_this_dialog, 0.5, {top:"0px", height:"100%"});
-		//_this_dialog.css({'top':'0',height:'100%'});//, 500);
+		_this_dialog.animate({'top':top+'px'}, 320, function(){
+			_this.addClass('full');
+			_this_dialog.animate({'top':'0px','height':'100%'}, 500);
+			_body.addClass('modal-open');
+		});
+
 	}
 });
 $('._jsX').on('click',function(e){
@@ -521,12 +524,10 @@ $('._jsX').on('click',function(e){
 	var _this_Exp = _this.closest('.Exp');
 	var top = _this_Exp[0].getBoundingClientRect().top;
 	var _this_dialog = _this_Exp.find('.Exp-dialog');
-	//_this_dialog.scrollTop(0).css({'top':top+'px', height:'388px'});//, 500, function(){
-	TweenLite.to(_this_dialog, 0.5, {top:top+"px", height:"388px"});
-	setTimeout(function(){
+	_this_dialog.scrollTop(0).animate({'top':top+'px', 'height':'388px'}, 500, function(){
 		_this_Exp.removeClass('full');
 		_body.removeClass('modal-open');
-	}, 550);
+	});
 		
 	//});
 });

@@ -99,30 +99,24 @@
 .Exp:nth-of-type(6) .Exp-header{background-color:#c1c1c1}
 
 .Exp-modal {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-.Exp.full .Exp-modal {
-  position: fixed;
   top:0;
   right:0;
   bottom:0;
   left:0;
+}
+.Exp.full .Exp-modal {
+  position: fixed;
   z-index: 1050;
-
 }
 .Exp-dialog {
   background-color: #f9f6ea;
-  top:0;
   right:0;
   left:0;
-  height: 388px;
   overflow: hidden;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
-  transition: all 0.5s;
-  -webkit-transform: translate3d(0,0,0);
+  height: 388px;
 
 }
 
