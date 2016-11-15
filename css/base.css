@@ -26,6 +26,7 @@ body{
   font-weight: 300;
   position: relative;
   margin:0;
+  
 }
 a, a:visited{
   color: #444;
@@ -152,19 +153,28 @@ figure.effect:hover img {
 }
 
 figure.effect p {
-  padding: 0 10px 0 0;
-  width: 50%;
-  border-right: 1px solid #fff;
-  text-align: right;
+  padding: 0 10px;
+  text-align: center;
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-40px,0,0);
-  transform: translate3d(-40px,0,0);
+  /*-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;*/
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  /*transition: opacity 0.35s, transform 0.35s;*/
+  /*-webkit-transform: translate3d(-40px,0,0);*/
+  /*transform: translate3d(-40px,0,0);*/
 }
 
 figure.effect:hover p {
   opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  /*-webkit-transform: translate3d(0,0,0);*/
+  /*transform: translate3d(0,0,0);*/
+}
+figure.effect svg {
+  width: 80%;
+  height: 100%;
+  transition: height 0.35s;
+
+}
+figure.effect:hover svg{
+  height: 60%;
 }

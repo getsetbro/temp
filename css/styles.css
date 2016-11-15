@@ -88,16 +88,14 @@ body>section:nth-of-type(6n+6) .preview, body>section:nth-of-type(6n+6) .modal-h
 }
 
 .grid{
-  width:100%;
+  width:50%;
+  height: 40vw;
   float:left;
   position: relative;
   min-height: 1px;
 }
 .row {margin: 8px 10%;}
 
-@media (min-width: 420px) {
-  .grid{width:50%;height: 40vw}
-}
 
 @media (min-width: 630px) {
   .grid{width:33.3333%;height: 25vw}
