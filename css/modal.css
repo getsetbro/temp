@@ -1,17 +1,17 @@
 /*normal modal*/
+.modal-open {overflow: hidden}
 .modal {
   position: fixed;
   top:50%;
   bottom:50%;
-  right: 0%;
-  left: 0%;
+  right: 0;
+  left: 0;
   z-index: 1050;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
-  transition: all 0.25s;
+  transition: all 0.4s;
 }
-.modal-open {overflow: hidden}
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -19,7 +19,6 @@
 .modal-open .active {
   top: 0%;
   bottom: 0%;
-
 }
 .modal-dialog {
   position:relative;
@@ -40,14 +39,6 @@
   text-align: center;
 }
 
-.modal-header h4{
-  font-size: 40px;
-  margin: 0;
-  line-height: 1;
-}
-.modal-header h4 img{
-  height: 99px
-}
 .close{
   position: absolute;
   top:20px;
@@ -65,22 +56,18 @@
 }
 
 .modal-body {
-  position: relative;
   padding: 15px;
   text-align: center;
+  background-color: #f9f6ea;
+}
+.modal-body >p, .modal-body >h4 {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .modal-hero{
   width:100%;
   max-width: 800px;
-
-}
-.project-article{
-  max-width:550px;
-  margin:auto;
-  text-align: left
-}
-.project-article h3{
-  font-size: 30px
 }
 
 /*EXP modal*/
@@ -109,29 +96,38 @@
 }
 .Exp-dialog {
   background-color: #f9f6ea;
+  top:0;
   right:0;
   left:0;
+  height: 388px;
   overflow: hidden;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
-  height: 388px;
-
 }
 
 .Exp.full .Exp-dialog {
   position: absolute;
   overflow-y: auto;
 }
-
+.Exp-content {
+  position: relative;
+  background-color: #f9f6ea;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+  min-height: 100vh;
+}
 .Exp-header {
   padding: 15px 15px 0;
   color:#fff;
   position: relative;
-  height: 388px;
-  transition: height 0.5s;
+  min-height: 388px;
+  max-height: 388px;
 }
-.Exp.full .Exp-header {height: 500px}
+.Exp.full .Exp-header {
+  max-height: 999px;
+}
 .Exp-close{
   position: absolute;
   top:20px;
@@ -146,10 +142,7 @@
 }
 .Exp:not(.full) .Exp-close{display: none;}
 .Exp-close:hover{transform: rotate(90deg);}
-.downarrow{
-  width:80px;
-  height:80px;
-}
+
 .Exp-title{
   text-align: center;
 }
@@ -178,7 +171,7 @@
 .Exp:not(.full) .Exp-h3{display: none;}
 
 .Exp-hero{
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 .Exp:not(.full) .Exp-hero{
   transform: translateY(-200px);
@@ -195,4 +188,13 @@
   width:1230px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.downarrow{
+  width:80px;
+  height:80px;
+}
+.leftarrow{
+  width:80px;
+  height:80px;
+  vertical-align: middle;
 }

@@ -8,23 +8,25 @@
 		<polygon points="348 149.1 327.6 203.8 307.3 149.1 269.6 149.1 310.6 236.2 310.6 286.1 344.6 286.1 344.6 236.2 385.4 149.1 348 149.1"/>
 	</symbol>
 	<symbol id="times" viewBox="0 0 62 62">
-        <title>x</title>
 		<line stroke-width="1px" stroke="white" x1="11" y1="11" x2="51" y2="51"/>
 		<line stroke-width="1px" stroke="white" x1="51" y1="11" x2="11" y2="51"/>
 	</symbol>
 	<symbol id="downarrow" viewBox="0 0 62 62">
-        <title>v</title>
 		<polyline stroke-width="1px" stroke="white" fill="none" points="51,23 31,43 11,23"/>
 	</symbol>
 	<symbol id="downarrowgray" viewBox="0 0 62 62">
-        <title>v</title>
 		<polyline stroke-width="1px" stroke="#bbbbbb" fill="none" points="51,23 31,43 11,23"/>
 	</symbol>
+	<symbol id="leftarrow" viewBox="0 0 62 62">
+		<polyline stroke-width="1px" stroke="#B6B6B6" fill="none" points="27.5,46.5 12,31 27.5,15.5 "/>
+		<line stroke-width="1px" stroke="#B6B6B6" fill="none" x1="12" y1="31" x2="49" y2="31"/>
+	</symbol>
+
 	<symbol id="ipad">
         <title>iPad</title>
-	    <path stroke-width="3" stroke="#f2f2f2" opacity="0.08" d="M1899.7,1384H100.3C45.1,1384,0,1338.9,0,1283.7V106.3C0,51.2,45.1,6,100.3,6H1899.7C1954.9,6,2000,51.1,2000,106.3V1283.7C2000,1338.9,1954.9,1384,1899.7,1384Z"/>
-	    <circle cx="93.9" cy="690.5" r="51.4" fill="#f6f6f6" opacity="0.5"/>
-	    <circle cx="1913.5" cy="690.5" r="9" fill="#6c6c6c"/>
+	    <path d="M1899.7,1384H100.3C45.1,1384,0,1338.9,0,1283.7V106.3C0,51.2,45.1,6,100.3,6H1899.7C1954.9,6,2000,51.1,2000,106.3V1283.7C2000,1338.9,1954.9,1384,1899.7,1384Z" opacity="0.08" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="3" style="isolation:isolate" transform="translate(1.5 -4.5)"/>
+	    <circle cx="93.9" cy="690.5" fill="#f6f6f6" r="51.4"/>
+	    <circle cx="1913.5" cy="690.5" fill="#6c6c6c" r="9"/>
 	</symbol>
 	<symbol id="colliers" viewBox="35 35 230 230">
         <title>Colliers</title>
