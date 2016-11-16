@@ -95,7 +95,8 @@
   height: 388px;
   overflow: hidden;
   overflow-x: hidden;
-  -webkit-transform: translateZ(0%);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .Exp.full .Exp-modal {
   position: fixed;

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Joel Eby</title>
 	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,700,800"/>
@@ -523,10 +523,10 @@
 <script>svg4everybody();</script>
 <script src="js/scale.fix.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script>
 
 //var prev = getElementsByClassName('.preview');
-
 var _body = $(document.body);
 $('.Exp').on('click',function(e){
 	//e.stopPropagation();
@@ -534,12 +534,11 @@ $('.Exp').on('click',function(e){
 	if(!_this.hasClass('full')){
 		var top = _this[0].getBoundingClientRect().top;
 		var _modal = _this.find('.Exp-modal');
+		var tl = new TimelineLite();
 		_body.addClass('modal-open');
 		_this.addClass('full');//add fixed
-		_modal.css({top:top+'px'});
-		window.setTimeout(function(){
-			_modal.addClass('full').animate({top:'0px', height:'100%'}, 500);
-		}, 301);
+		_modal.addClass('full');//add overflow:auto
+		tl.fromTo(_modal, 0.5, {top:top+'px'}, {top:0, height:'100%'});
 	}
 });
 $('._jsX').on('click',function(e){
@@ -548,11 +547,15 @@ $('._jsX').on('click',function(e){
 	var _Exp = _this.closest('.Exp');
 	var top = _Exp[0].getBoundingClientRect().top;
 	var _modal = _Exp.find('.Exp-modal');
-	_modal.scrollTop(0).animate({top:top+'px', height:'388px'}, 500, function(){
+	var tl2 = new TimelineLite();
+	_modal.scrollTop(0);
+	tl2.to(_modal, 0.5, {top:top+'px', height:'388px'});
+
+	window.setTimeout(function(){
 		_modal.removeClass('full');//remove overflow:auto
 		_Exp.removeClass('full');//remove fixed
 		_body.removeClass('modal-open');
-	});
+	}, 501);
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
