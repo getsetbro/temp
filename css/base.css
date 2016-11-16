@@ -96,3 +96,11 @@ footer{
 .u-maxw1250{max-width:1250px}
 
 ._jsX{cursor: pointer;}
+
+.fixed-fix {
+  position:fixed;
+  top:-1px; 
+  height:1px; 
+  width:100%; 
+  background:white;
+}

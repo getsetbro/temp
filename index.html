@@ -31,8 +31,8 @@
 		<a href="//www.crrnt.co" target="_blank">ECD at CRRNT</a>
 	</p>
 	<svg class="downarrow" preserveAspectRatio="xMidYMid meet"><use xlink:href="./svg/sprites.svg#downarrowgray"></use></svg>
-
 </header>
+<div class="fixed-fix"></div>
 <!-- about me modal -->
 <div class="modal _aboutme">
 	<div class="modal-dialog">
@@ -537,7 +537,7 @@ $('.Exp').on('click',function(e){
 		var _modal = _this.find('.Exp-modal');
 		_this.addClass('full');
 		//setTimeout(function() {
-			_modal.css({top:top+'px'}).animate({top:'0px', height:'100vh'}, 500).addClass('full');
+			_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
 
 		//}, 10);
 	}
