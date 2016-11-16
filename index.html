@@ -20,7 +20,7 @@
 				<use xlink:href="./svg/sprites.svg#joeleby" fill="#ffffff"></use>
 			</mask>
 		</defs>
-		<image xlink:href="http://joeleby.com/img/joel.png" width="435" height="652.5" mask="url(#mask)" y="-58" x="0"/>
+		<image xlink:href="//joeleby.com/img/joel.png" width="435" height="652.5" mask="url(#mask)" y="-58" x="0"/>
 	</svg>
 
 	<p class="profile-title">I am a seasoned creative director and designer. With 20 years experience building digital creative teams, leading ideation and execution for experiences, campaigns and innovative work, I lorem ipsum dolor sit amet with ease.</div>
@@ -45,7 +45,7 @@
 							<use xlink:href="./svg/sprites.svg#joeleby" fill="#ffffff"></use>
 						</mask>
 					</defs>
-					<image xlink:href="http://joeleby.com/img/joel.png" width="435" height="652.5" mask="url(#mask)" y="-58" x="0"/>
+					<image xlink:href="//joeleby.com/img/joel.png" width="435" height="652.5" mask="url(#mask)" y="-58" x="0"/>
 				</svg>
 			</div>
 			<article class="modal-body">
@@ -536,10 +536,7 @@ $('.Exp').on('click',function(e){
 		var top = _this[0].getBoundingClientRect().top;
 		var _modal = _this.find('.Exp-modal');
 		_this.addClass('full');
-		//setTimeout(function() {
-			_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
-
-		//}, 10);
+		_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
 	}
 });
 $('._jsX').on('click',function(e){
@@ -550,13 +547,10 @@ $('._jsX').on('click',function(e){
 	var _modal = _Exp.find('.Exp-modal');
 	_modal.scrollTop(0);
 	_modal.removeClass('full');
-	//setTimeout(function() {
-		_modal.animate({top:top+'px', height:'388px'}, 500, function(){
-			_Exp.removeClass('full');
-		});
-		_body.removeClass('modal-open');
-	//}, 510);
-	//});
+	_modal.animate({top:top+'px', height:'388px'}, 500, function(){
+		_Exp.removeClass('full');
+	});
+	_body.removeClass('modal-open');
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
