@@ -85,33 +85,29 @@
 .Exp:nth-of-type(6) .Exp-header{background-color:#c1c1c1}
 
 .Exp-modal {
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-}
-.Exp.full .Exp-modal {
-  position: fixed;
-  z-index: 1050;
-}
-.Exp-dialog {
-  background-color: #f9f6ea;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
   right:0;
   left:0;
   height: 388px;
   overflow: hidden;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-  transition: all 0.5s;
+}
+.Exp.full .Exp-modal {
+  position: fixed;
+  z-index: 1050;
+}
+.Exp-modal.full {
+  overflow-y: auto;
 }
 
-.Exp.full .Exp-dialog {
-  position: absolute;
-  overflow-y: auto;
-  top:0!important;
-  height: 100vh !important;
+.Exp-dialog {
+  position: relative;
+  width: auto;
+  background-color: #f9f6ea;
 }
+
+.Exp.full .Exp-dialog {}
 .Exp-content {
   position: relative;
   background-color: #f9f6ea;

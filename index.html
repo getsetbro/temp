@@ -532,15 +532,14 @@ $('.Exp').on('click',function(e){
 	//e.stopPropagation();
 	var _this = $(this);
 	if(!_this.hasClass('full')){
-
+		_body.addClass('modal-open');
 		var top = _this[0].getBoundingClientRect().top;
-		var _dialog = _this.find('.Exp-dialog');
-		_dialog.css({top:top+'px'});
+		var _modal = _this.find('.Exp-modal');
+		_this.addClass('full');
+		//setTimeout(function() {
+			_modal.css({top:top+'px'}).animate({top:'0px', height:'100vh'}, 500).addClass('full');
 
-		setTimeout(function() {
-			_this.addClass('full');
-			_body.addClass('modal-open');
-		}, 100);
+		//}, 10);
 	}
 });
 $('._jsX').on('click',function(e){
@@ -548,11 +547,15 @@ $('._jsX').on('click',function(e){
 	var _this = $(this);
 	var _Exp = _this.closest('.Exp');
 	var top = _Exp[0].getBoundingClientRect().top;
-	var _dialog = _Exp.find('.Exp-dialog');
-	_dialog.scrollTop(0);
-	//.animate({top:top+'px', height:'388px'}, 500, function(){
-		_Exp.removeClass('full');
+	var _modal = _Exp.find('.Exp-modal');
+	_modal.scrollTop(0);
+	_modal.removeClass('full');
+	//setTimeout(function() {
+		_modal.animate({top:top+'px', height:'388px'}, 500, function(){
+			_Exp.removeClass('full');
+		});
 		_body.removeClass('modal-open');
+	//}, 510);
 	//});
 });
 $('.close').on('click',function(e){
