@@ -92,6 +92,7 @@
   height: 388px;
   overflow: hidden;
   overflow-x: hidden;
+  transform: translate3d(0px,0px,0px);
 }
 .Exp.full .Exp-modal {
   position: fixed;
