@@ -532,11 +532,14 @@ $('.Exp').on('click',function(e){
 	//e.stopPropagation();
 	var _this = $(this);
 	if(!_this.hasClass('full')){
-		_body.addClass('modal-open');
 		var top = _this[0].getBoundingClientRect().top;
 		var _modal = _this.find('.Exp-modal');
-		_this.addClass('full');
-		_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
+		_body.addClass('modal-open');
+		_this.addClass('full');//add fixed
+		_modal.css({top:top+'px'});
+		window.setTimeout(function(){
+			_modal.addClass('full').animate({top:'0px', height:'100%'}, 500);
+		}, 301);
 	}
 });
 $('._jsX').on('click',function(e){
@@ -545,12 +548,11 @@ $('._jsX').on('click',function(e){
 	var _Exp = _this.closest('.Exp');
 	var top = _Exp[0].getBoundingClientRect().top;
 	var _modal = _Exp.find('.Exp-modal');
-	_modal.scrollTop(0);
-	_modal.removeClass('full');
-	_modal.animate({top:top+'px', height:'388px'}, 500, function(){
-		_Exp.removeClass('full');
+	_modal.scrollTop(0).animate({top:top+'px', height:'388px'}, 500, function(){
+		_modal.removeClass('full');//remove overflow:auto
+		_Exp.removeClass('full');//remove fixed
+		_body.removeClass('modal-open');
 	});
-	_body.removeClass('modal-open');
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
