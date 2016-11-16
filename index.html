@@ -522,51 +522,51 @@
 <!-- <script src="./js/svg4everybody.min.js"></script> -->
 <!-- <script>svg4everybody();</script> -->
 <!-- <script src="js/scale.fix.js"></script> -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 <script>
 
 //var prev = getElementsByClassName('.preview');
 
-var _body = $(document.body);
-$('.Exp').on('click',function(e){
-	//e.stopPropagation();
-	var _this = $(this);
-	if(!_this.hasClass('full')){
-		_body.addClass('modal-open');
-		var top = _this[0].getBoundingClientRect().top;
-		var _modal = _this.find('.Exp-modal');
-		_this.addClass('full');
-		_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
-	}
-});
-$('._jsX').on('click',function(e){
-	e.stopPropagation();
-	var _this = $(this);
-	var _Exp = _this.closest('.Exp');
-	var top = _Exp[0].getBoundingClientRect().top;
-	var _modal = _Exp.find('.Exp-modal');
-	_modal.scrollTop(0);
-	_modal.removeClass('full');
-	_modal.animate({top:top+'px', height:'388px'}, 500, function(){
-		_Exp.removeClass('full');
-	});
-	_body.removeClass('modal-open');
-});
-$('.close').on('click',function(e){
-	e.stopPropagation();
-	$(this).closest('.modal').removeClass('active');
-	_body.removeClass('modal-open');
-});
-$('.grid ._jsmod').on('click',function(e){
-	e.preventDefault();
-	_body.addClass('modal-open');
-	$(this).prev().addClass('active');
-});
-$('a._jsmod').on('click',function(e){
-	e.preventDefault();
-	_body.addClass('modal-open');
-	$('._aboutme').addClass('active');
-});
+// var _body = $(document.body);
+// $('.Exp').on('click',function(e){
+// 	//e.stopPropagation();
+// 	var _this = $(this);
+// 	if(!_this.hasClass('full')){
+// 		_body.addClass('modal-open');
+// 		var top = _this[0].getBoundingClientRect().top;
+// 		var _modal = _this.find('.Exp-modal');
+// 		_this.addClass('full');
+// 		_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
+// 	}
+// });
+// $('._jsX').on('click',function(e){
+// 	e.stopPropagation();
+// 	var _this = $(this);
+// 	var _Exp = _this.closest('.Exp');
+// 	var top = _Exp[0].getBoundingClientRect().top;
+// 	var _modal = _Exp.find('.Exp-modal');
+// 	_modal.scrollTop(0);
+// 	_modal.removeClass('full');
+// 	_modal.animate({top:top+'px', height:'388px'}, 500, function(){
+// 		_Exp.removeClass('full');
+// 	});
+// 	_body.removeClass('modal-open');
+// });
+// $('.close').on('click',function(e){
+// 	e.stopPropagation();
+// 	$(this).closest('.modal').removeClass('active');
+// 	_body.removeClass('modal-open');
+// });
+// $('.grid ._jsmod').on('click',function(e){
+// 	e.preventDefault();
+// 	_body.addClass('modal-open');
+// 	$(this).prev().addClass('active');
+// });
+// $('a._jsmod').on('click',function(e){
+// 	e.preventDefault();
+// 	_body.addClass('modal-open');
+// 	$('._aboutme').addClass('active');
+// });
 
 </script>
 </body>
