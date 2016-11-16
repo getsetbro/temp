@@ -72,10 +72,7 @@
 
 /*EXP modal*/
 
-.Exp{
-  height: 388px;
-  -webkit-backface-visibility: hidden;
-}
+.Exp{height: 388px;}
 .Exp:not(.full){cursor: pointer;}
 
 .Exp:nth-child(odd) .Exp-header{background: #989898}
@@ -95,8 +92,8 @@
   height: 388px;
   overflow: hidden;
   overflow-x: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  -webkit-transform: translate3d(0,0,0); 
+  transform: translate3d(0,0,0);
 }
 .Exp.full .Exp-modal {
   position: fixed;
@@ -109,8 +106,10 @@
 .Exp-dialog {
   position: relative;
   width: auto;
+  background-color: #f9f6ea;
 }
 
+.Exp.full .Exp-dialog {}
 .Exp-content {
   position: relative;
   background-color: #f9f6ea;

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>Joel Eby</title>
 	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,700,800"/>
@@ -519,26 +519,24 @@
 	<a href="//www.linkedin.com/in/joeleby" target="_blank">LinkedIn</a>
 </p>
 <footer>&copy;thewanted <script>document.write(new Date().getFullYear())</script></footer>
-<script src="./js/svg4everybody.min.js"></script>
-<script>svg4everybody();</script>
-<script src="js/scale.fix.js"></script>
+<!-- <script src="./js/svg4everybody.min.js"></script> -->
+<!-- <script>svg4everybody();</script> -->
+<!-- <script src="js/scale.fix.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script>
 
 //var prev = getElementsByClassName('.preview');
+
 var _body = $(document.body);
 $('.Exp').on('click',function(e){
 	//e.stopPropagation();
 	var _this = $(this);
 	if(!_this.hasClass('full')){
+		_body.addClass('modal-open');
 		var top = _this[0].getBoundingClientRect().top;
 		var _modal = _this.find('.Exp-modal');
-		var tl = new TimelineLite();
-		_body.addClass('modal-open');
-		_this.addClass('full');//add fixed
-		_modal.addClass('full');//add overflow:auto
-		tl.fromTo(_modal, 0.5, {top:top+'px'}, {top:0, height:'100%'});
+		_this.addClass('full');
+		_modal.css({top:top+'px'}).animate({top:'0px', height:'100%'}, 500).addClass('full');
 	}
 });
 $('._jsX').on('click',function(e){
@@ -547,15 +545,12 @@ $('._jsX').on('click',function(e){
 	var _Exp = _this.closest('.Exp');
 	var top = _Exp[0].getBoundingClientRect().top;
 	var _modal = _Exp.find('.Exp-modal');
-	var tl2 = new TimelineLite();
 	_modal.scrollTop(0);
-	tl2.to(_modal, 0.5, {top:top+'px', height:'388px'});
-
-	window.setTimeout(function(){
-		_modal.removeClass('full');//remove overflow:auto
-		_Exp.removeClass('full');//remove fixed
-		_body.removeClass('modal-open');
-	}, 501);
+	_modal.removeClass('full');
+	_modal.animate({top:top+'px', height:'388px'}, 500, function(){
+		_Exp.removeClass('full');
+	});
+	_body.removeClass('modal-open');
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
