@@ -36,12 +36,12 @@ header p{
   padding-right: 0;
 }
 
-body>section:nth-of-type(6n+1) .preview, body>section:nth-of-type(6n+1) .modal-header{background-color:#0080ed}
-body>section:nth-of-type(6n+2) .preview, body>section:nth-of-type(6n+2) .modal-header{background-color:#7cb940}
-body>section:nth-of-type(6n+3) .preview, body>section:nth-of-type(6n+3) .modal-header{background-color:#939393}
-body>section:nth-of-type(6n+4) .preview, body>section:nth-of-type(6n+4) .modal-header{background-color:#c6c6c6}
-body>section:nth-of-type(6n+5) .preview, body>section:nth-of-type(6n+5) .modal-header{background-color:#989898}
-body>section:nth-of-type(6n+6) .preview, body>section:nth-of-type(6n+6) .modal-header{background-color:#c1c1c1}
+body>section:nth-of-type(6n+1) .modal-header{background-color:#0080ed}
+body>section:nth-of-type(6n+2) .modal-header{background-color:#7cb940}
+body>section:nth-of-type(6n+3) .modal-header{background-color:#939393}
+body>section:nth-of-type(6n+4) .modal-header{background-color:#c6c6c6}
+body>section:nth-of-type(6n+5) .modal-header{background-color:#989898}
+body>section:nth-of-type(6n+6) .modal-header{background-color:#c1c1c1}
 
 .grid .modal-header, ._aboutme .modal-header{background-color:#6b6b6b}
 

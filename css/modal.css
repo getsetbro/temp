@@ -72,7 +72,7 @@
 
 /*EXP modal*/
 .Exp:nth-child(odd) .Exp-header{background: #989898}
-.Exp:nth-child(even).Exp-header{background: #c1c1c1}
+.Exp:nth-child(even) .Exp-header{background: #c1c1c1}
 .Exp:nth-of-type(1) .Exp-header{background-color:#0080ed}
 .Exp:nth-of-type(2) .Exp-header{background-color:#7cb940}
 .Exp:nth-of-type(3) .Exp-header{background-color:#939393}
