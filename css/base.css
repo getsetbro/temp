@@ -23,8 +23,7 @@ html {
 html {
   font-size: 22px;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent
 }
 
 body{
@@ -36,7 +35,22 @@ body{
   font-weight: 300;
   margin:0;
 }
-
+html,body{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 a, a:visited{
   color: #444;
   text-decoration: none
@@ -96,11 +110,3 @@ footer{
 .u-maxw1250{max-width:1250px}
 
 ._jsX{cursor: pointer;}
-
-.fixed-fix {
-  position:fixed;
-  top:-1px; 
-  height:1px; 
-  width:100%; 
-  background:white;
-}
