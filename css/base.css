@@ -39,7 +39,6 @@ html,
 body {
   position: relative;
   height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 a, a:visited{
