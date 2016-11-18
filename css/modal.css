@@ -71,10 +71,6 @@
 }
 
 /*EXP modal*/
-
-.Exp{height: 388px;}
-.Exp:not(.full){cursor: pointer;}
-
 .Exp:nth-child(odd) .Exp-header{background: #989898}
 .Exp:nth-child(even) .Exp-header{background: #c1c1c1}
 .Exp:nth-of-type(1) .Exp-header{background-color:#0080ed}
@@ -84,38 +80,22 @@
 .Exp:nth-of-type(5) .Exp-header{background-color:#989898}
 .Exp:nth-of-type(6) .Exp-header{background-color:#c1c1c1}
 
-.Exp-modal {
+.Exp{max-height: 388px;}
+.Exp:not(.full){cursor: pointer;}
+.Exp {
   -webkit-overflow-scrolling: touch;
-  outline: 0;
-  right:0;
-  left:0;
-  height: 388px;
   overflow: hidden;
   overflow-x: hidden;
   -webkit-transform: translate3d(0,0,0); 
   transform: translate3d(0,0,0);
 }
-.Exp.full .Exp-modal {
-  position: fixed;
-  z-index: 1050;
-}
-.Exp-modal.full {
+.Exp.full {
+  max-height: 100vh;
   overflow-y: auto;
 }
 
-.Exp-dialog {
-  position: relative;
-  width: auto;
-  background-color: #f9f6ea;
-}
-
-.Exp.full .Exp-dialog {}
 .Exp-content {
-  position: relative;
   background-color: #f9f6ea;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  outline: 0;
   min-height: 100vh;
 }
 .Exp-header {
