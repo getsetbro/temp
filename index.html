@@ -526,7 +526,7 @@
 
 //var prev = getElementsByClassName('.preview');
 
-var _body = $('body');
+var _doc = $('html,body');
 var offsetPre = 0;
 $('.Exp').on('click',function(e){
 	//e.stopPropagation();
@@ -535,8 +535,8 @@ $('.Exp').on('click',function(e){
 		offsetPre = $(window).scrollTop();
 		var offsetTop = _this.offset().top;
 		var _modal = _this.find('.Exp-modal');
-		$('html,body').animate({ scrollTop: offsetTop}, 500, function(){
-			_body.addClass('modal-open');
+		_doc.animate({ scrollTop: offsetTop}, 500, function(){
+			_doc.addClass('modal-open');
 		});
 		_this.addClass('full');
 		_modal.addClass('full');
@@ -551,23 +551,23 @@ $('._jsX').on('click',function(e){
 	_Exp.animate({ scrollTop: 0}, 1, function(){
 		_Exp.removeClass('full');
 	});
-	_body.removeClass('modal-open');
-	$('html,body').animate({ scrollTop: offsetPre}, 350);
+	_doc.removeClass('modal-open');
+	_doc.animate({ scrollTop: offsetPre}, 350);
 
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
 	$(this).closest('.modal').removeClass('active');
-	_body.removeClass('modal-open');
+	_doc.removeClass('modal-open');
 });
 $('.grid ._jsmod').on('click',function(e){
 	e.preventDefault();
-	_body.addClass('modal-open');
+	_doc.addClass('modal-open');
 	$(this).prev().addClass('active');
 });
 $('a._jsmod').on('click',function(e){
 	e.preventDefault();
-	_body.addClass('modal-open');
+	_doc.addClass('modal-open');
 	$('._aboutme').addClass('active');
 });
 
