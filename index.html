@@ -526,7 +526,7 @@
 
 //var prev = getElementsByClassName('.preview');
 
-var _doc = $('html,body');
+var _doc = $('html');
 var offsetPre = 0;
 $('.Exp').on('click',function(e){
 	//e.stopPropagation();
@@ -535,7 +535,7 @@ $('.Exp').on('click',function(e){
 		offsetPre = $(window).scrollTop();
 		var offsetTop = _this.offset().top;
 		var _modal = _this.find('.Exp-modal');
-		_doc.animate({ scrollTop: offsetTop}, 500, function(){
+		$('html,body').animate({ scrollTop: offsetTop}, 500, function(){
 			_doc.addClass('modal-open');
 		});
 		_this.addClass('full');
@@ -552,7 +552,7 @@ $('._jsX').on('click',function(e){
 		_Exp.removeClass('full');
 	});
 	_doc.removeClass('modal-open');
-	_doc.animate({ scrollTop: offsetPre}, 350);
+	$('html,body').animate({ scrollTop: offsetPre}, 350);
 
 });
 $('.close').on('click',function(e){

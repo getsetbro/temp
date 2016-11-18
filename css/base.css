@@ -23,7 +23,8 @@ html {
 html {
   font-size: 22px;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
 }
 
 body{
@@ -35,12 +36,7 @@ body{
   font-weight: 300;
   margin:0;
 }
-html,
-body {
-  position: relative;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-}
+
 a, a:visited{
   color: #444;
   text-decoration: none
