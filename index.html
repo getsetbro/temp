@@ -519,9 +519,8 @@
 	<a href="//www.linkedin.com/in/joeleby" target="_blank">LinkedIn</a>
 </p>
 <footer>&copy;thewanted <script>document.write(new Date().getFullYear())</script></footer>
-<script src="./js/svg4everybody.min.js"></script>
-<script>svg4everybody();</script>
-<script src="js/scale.fix.js"></script>
+<script src="./js/svgxuse.min.js"></script>
+<!--<script src="js/scale.fix.js"></script>-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 
@@ -547,10 +546,11 @@ $('._jsX').on('click',function(e){
 	var _this = $(this);
 	var _Exp = _this.closest('.Exp');
 	var _modal = _Exp.find('.Exp-modal');
-	_Exp.animate({ scrollTop: 0}, 50, function(){
+	_Exp.animate({ scrollTop: 0}, 10, function(){
 		_Exp.removeClass('full');
 	});
 	_body.removeClass('modal-open');
+
 });
 $('.close').on('click',function(e){
 	e.stopPropagation();
