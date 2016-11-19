@@ -67,19 +67,13 @@ a:focus {
 img {vertical-align: middle;border: 0;max-width:100%;}
 svg{overflow: hidden;max-width: 100%}
 
-h2,h3,h4,h5,h6{font-family: inherit;font-weight: 400;line-height: 1.1;color: inherit;}
-h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight: 400;line-height: 1;font-size: 75%}
-h2 {font-size: 50px;margin: 0}
-h3 {font-size: 30px}
-h4 {font-size: 28px}
-h5 {font-size: 25px}
+h1,h2,h3,h4,h5,h6{font-family: inherit;font-weight: 400;line-height: 1.1;color: inherit;}
+h2 {font-size: 55px;margin: 0}
+h3 {font-size: 50px}
+h4 {font-size: 30px}
+h5 {font-size: 26px}
 h6 {font-size: 22px}
 p {margin: 0 0 10px}
-
-footer{
-  font-size: 10px;
-  margin-top:20px;
-}
 
 .clearfix:after{
   clear:both;
@@ -100,13 +94,13 @@ footer{
   display: inline-block;
   margin-right: -4px;
 }
-.u-maxw550{max-width: 550px}
-.u-maxw650{max-width: 650px}
-.u-maxw750{max-width: 750px}
-.u-maxw850{max-width: 850px}
-.u-maxw950{max-width: 950px}
-.u-maxw1050{max-width:1050px}
-.u-maxw1150{max-width:1150px}
-.u-maxw1250{max-width:1250px}
+.u-maxw550{ max-width: 550px;  margin-right: auto; margin-left: auto;}
+.u-maxw650{ max-width: 650px;  margin-right: auto; margin-left: auto;}
+.u-maxw750{ max-width: 750px;  margin-right: auto; margin-left: auto;}
+.u-maxw850{ max-width: 850px;  margin-right: auto; margin-left: auto;}
+.u-maxw950{ max-width: 950px;  margin-right: auto; margin-left: auto;}
+.u-maxw1050{max-width:1050px;  margin-right: auto; margin-left: auto;}
+.u-maxw1150{max-width:1150px;  margin-right: auto; margin-left: auto;}
+.u-maxw1250{max-width:1250px;  margin-right: auto; margin-left: auto;}
 
 ._jsX{cursor: pointer;}

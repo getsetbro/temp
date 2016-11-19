@@ -1,30 +1,78 @@
-main>section:nth-of-type(6n+1){background-color:#0080ed}
-main>section:nth-of-type(6n+2){background-color:#7cb940}
-main>section:nth-of-type(6n+3){background-color:#939393}
-main>section:nth-of-type(6n+4){background-color:#c6c6c6}
-main>section:nth-of-type(6n+5){background-color:#989898}
-main>section:nth-of-type(6n+6){background-color:#c1c1c1}
+main>section:nth-of-type(odd), body>article:nth-of-type(odd) .modal-header{ background-color:#949494; }
+main>section:nth-of-type(even), body>article:nth-of-type(even) .modal-header{ background-color:#c4c4c4; }
+main>section:nth-of-type(1), body>article:nth-of-type(1) .modal-header{ background-color:#0080ed; }
+main>section:nth-of-type(2), body>article:nth-of-type(2) .modal-header{ background-color:#7cb940; }
 .Exp{
   height: 388px;
-  overflow: hidden
+  overflow: hidden;
+  cursor: pointer;
 }
-
+.Exp-header{text-align: center;}
 .modal{
   display: none;
   position: absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: auto;
+  top:100%;
+  right:0;
+  left:0;
+  height: 0;
 }
+.modal.show{
+  display: block;
+}
+
 .modal-content{
   background-color: #f9f6ea;
   min-height: 100vh;
 }
 .modal-header{
-  background-color:#0080ed;
+  text-align: center;
+  position: relative;
+  color:white;
+}
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width:80px;
+  height: 80px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  -webkit-transform-origin: 40px 40px;
+  -moz-transform-origin: 40px 40px;
+  -ms-transform-origin: 40px 40px;
+  -o-transform-origin: 40px 40px;
+  transform-origin: 40px 40px;
+}
+.close:hover{
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.modal-h2{
+  color:white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 55px;
+}
+
+.modal-body{padding: 15px;}
+.modal-h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
