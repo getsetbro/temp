@@ -5,7 +5,6 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .modal-header{ backgrou
 .Exp{
   height: 388px;
   overflow: hidden;
-  cursor: pointer;
 }
 .Exp-header{text-align: center;}
 .Exp-hero{
@@ -20,13 +19,18 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .modal-header{ backgrou
   -ms-transform:translateY(100px);
   -o-transform:translateY(100px);
   transform:translateY(100px);
-
 }
 .Exp:hover .Exp-hero{
   -webkit-transform:translateY(0);
   -ms-transform:translateY(0);
   -o-transform:translateY(0);
   transform:translateY(0);
+}
+.Exp.on .Exp-hero{
+  -webkit-transform:translateY(200px);
+  -ms-transform:translateY(200px);
+  -o-transform:translateY(200px);
+  transform:translateY(200px);
 }
 
 .modal{
@@ -85,7 +89,18 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .modal-header{ backgrou
 .modal-h2{
   color:white;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 55px;
+  font-size: 30px;
+  max-width: 770px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 630px) {
+  .modal-h2{
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
 }
 
 .modal-body{padding: 15px;}
@@ -102,7 +117,7 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .modal-header{ backgrou
 
 .modal-body>svg, .modal-body>img{
   display: block;
-  width:1280px;
+  width:1230px;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
