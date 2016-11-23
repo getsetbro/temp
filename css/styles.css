@@ -9,7 +9,7 @@ header{
   margin: 125px auto 40px;
 }
 
-h1.profile-title{
+.profile-title{
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: 19px;
