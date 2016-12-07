@@ -1,14 +1,19 @@
 main>section:nth-of-type(odd), body>article:nth-of-type(odd) .mdl-header{ background-color:#949494; }
-main>section:nth-of-type(even), body>article:nth-of-type(even) .mdl-header{ background-color:#c4c4c4; }
-main>section:nth-of-type(1), body>article:nth-of-type(1) .mdl-header{ background-color:#0080ed; }
-main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background-color:#7cb940; }
+main>section:nth-of-type(even),body>article:nth-of-type(even) .mdl-header{background-color:#c4c4c4; }
+main>section:nth-of-type(1), body>article:nth-of-type(1) .mdl-header{ background-color:#1a84ea; }
+main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background-color:#0d4343; }
+main>section:nth-of-type(3), body>article:nth-of-type(3) .mdl-header{ background-color:#b63b33; }
+main>section:nth-of-type(4), body>article:nth-of-type(4) .mdl-header{ background-color:#6aa839; }
+main>section:nth-of-type(5), body>article:nth-of-type(5) .mdl-header{ background-color:#225887; }
+main>section:nth-of-type(6), body>article:nth-of-type(6) .mdl-header{ background-color:#38d665; }
 .Exp{
-  height: 388px;
+  height: 500px;
   overflow: hidden;
+  padding: 0 20px;
 }
 .Exp-header{text-align: center;}
 .Exp-logo{
-  transform: scale(2);
+  /*transform: scale(1.6);*/
 }
 .Exp-h2{
   color:white;
@@ -17,12 +22,13 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background
   max-width: 770px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
+  padding: 0 50px;
 }
 
 @media (min-width: 630px) {
   .Exp-h2{
-    font-size: 45px;
+    font-size: 30px;
+    letter-spacing: -2px;
   }
 }
 .Exp-hero{
@@ -77,7 +83,7 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background
   position: relative;
   color:white;
   padding-top: 1px;
-  min-height: 388px;
+  min-height: 500px;
 }
 .close{
   position: absolute;
@@ -107,7 +113,7 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background
   transform: rotate(90deg);
 }
 .mdl-logo{
-  transform: scale(2);
+  /*transform: scale(1.6);*/
 }
 .mdl-h2{
   color:white;
@@ -121,7 +127,7 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background
 
 @media (min-width: 630px) {
   .mdl-h2{
-    font-size: 45px;
+    font-size: 40px;
     letter-spacing: -2px;
   }
 }
@@ -142,11 +148,14 @@ main>section:nth-of-type(2), body>article:nth-of-type(2) .mdl-header{ background
 
 .mdl-body>svg, .mdl-body>img{
   display: block;
-  width:1230px;
+  width:1400px;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
+
+img.portrait{ width: 600px;}
+
 .mdl-body > p{
   margin-top:55px;
   margin-bottom:55px;
